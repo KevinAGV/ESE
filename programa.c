@@ -2,9 +2,13 @@
 #INT_TIMER0
 int contador =0;
 long conteo=0;
+int opcionA=1;
 void TIMER0(){
     contador++;
     output_low(PIN_D2);
+    if(opcionA==1){
+        conteo++;
+    }
     set_timer0(15536);
 }
 void main()
@@ -30,7 +34,7 @@ void main()
         }
         
         switch(op){
-            case 'r':
+            case 'R':
                conteo=0;
             break;
             
