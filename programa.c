@@ -1,5 +1,6 @@
 #include <programa.h>
 
+
 int contador =0;
 
 #INT_TIMER0
@@ -20,7 +21,7 @@ void main()
    while(TRUE)
    {
 
-        if(contador==100){
+        if(contador==1){
             output_high(PIN_D2);
             contador=0;
             
