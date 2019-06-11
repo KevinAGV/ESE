@@ -10,14 +10,17 @@ void TIMER0(){
 }
 void main()
 {
-   
+    setup_timer_0(RTCC_INTERNAL|RTCC_DIV_8);
+    enable_interrupts(INT_TIMER0);
+    enable_interrupts(GLOBAL);
+    set_timer0(15536);
     
     
     
    while(TRUE)
    {
 
-        if(contador==10){
+        if(contador==100){
             output_high(PIN_D2);
             contador=0;
             
