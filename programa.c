@@ -1,7 +1,7 @@
 #include <programa.h>
 #INT_TIMER0
 int contador =0;
-
+long conteo=0;
 void TIMER0(){
     contador++;
     output_low(PIN_D2);
@@ -15,15 +15,27 @@ void main()
     set_timer0(15536);
     
     printf("Bienvenido");
-    
+    char op;
    while(TRUE)
    {
 
         if(contador==1){
             output_high(PIN_D2);
             contador=0;
-            
+        }
         
+        if(kbhit()){
+        //getch(op);
+            op=getch();
+        }
+        
+        switch(op){
+            case 'r':
+               conteo=0;
+            break;
+            
+           
+            
         }
       //TODO: User Code
    }
