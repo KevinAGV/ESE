@@ -1,9 +1,7 @@
 #include <programa.h>
-
-
+#INT_TIMER0
 int contador =0;
 
-#INT_TIMER0
 void TIMER0(){
     contador++;
     output_low(PIN_D2);
@@ -16,7 +14,7 @@ void main()
     enable_interrupts(GLOBAL);
     set_timer0(15536);
     
-    
+    printf("Bienvenido");
     
    while(TRUE)
    {
@@ -31,3 +29,4 @@ void main()
    }
 
 }
+
