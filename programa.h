@@ -1,5 +1,4 @@
 #include <18F4620.h>
-
 #device ADC=10
 #include <stdio.h>
 #include <stdlib.h>
