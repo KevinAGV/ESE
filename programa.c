@@ -1,16 +1,28 @@
 #include <programa.h>
-#use rs232(baud=9600,parity=N,xmit=PIN_C6,rcv=PIN_C7,bits=8)
-#include <library/stdio.h>
+
+int contador =0;
+
+#INT_TIMER0
+void TIMER0(){
+    contador++;
+    output_low(PIN_D2);
+    set_timer0(15536);
+}
 void main()
 {
    
-    printf("Bienvenido; )";
+    
     
     
    while(TRUE)
    {
 
-
+        if(contador==10){
+            output_high(PIN_D2);
+            contador=0;
+            
+        
+        }
       //TODO: User Code
    }
 
